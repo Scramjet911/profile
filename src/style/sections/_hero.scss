@@ -1,19 +1,21 @@
 #hero {
-  min-height: 100vh;
-  height: 100vh;
+  min-height: 200px;
+  height: 80vh;
+  width: 100%;
   display: flex;
   align-items: center;
   border-bottom: 0px;
   background: $white-color;
   font-weight: 400;
   color: $dark-blue-text;
-  padding: 0rem 5.6rem;
+  // padding: 0rem 5.6rem;
   margin-bottom: 0;
-  top: 0;
+  top: 0px;
   left: 0;
   bottom: 0;
   right: 0;
   z-index: -1;
+  position: relative;
 
   // If you want to set a background image on the hero section, uncomment these with yout custom image
 
@@ -26,24 +28,25 @@
   }
 
   .hero-title {
-    font-size: 5.6rem;
+  // font-size: 62%;
+    font-size: 3rem;
     font-weight: 700;
     margin-bottom: 3.2rem;
     text-align: left;
 
     @include respond(tab-land) {
-      font-size: 4rem;
+      font-size: 2.5rem;
     }
     @include respond(tab-port) {
-      font-size: 3.6rem;
+      font-size: 2.5rem;
       text-align: center;
     }
     @include respond(phone) {
-      font-size: 3.5rem;
+      font-size: 1.8rem;
       line-height: 1.5;
     }
     @include respond(phone-xs) {
-      font-size: 2.8rem;
+      font-size: 1.5rem;
     }
   }
 
@@ -55,10 +58,10 @@
     }
 
     & a {
-      font-size: 2.4rem;
+      font-size: 1.4rem;
 
       @include respond(phone) {
-        font-size: 2rem;
+        font-size: 1rem;
       }
     }
   }

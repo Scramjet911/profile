@@ -10,18 +10,22 @@
   }
 
   .project-wrapper {
-    margin-bottom: 15rem;
+    margin-bottom: 5rem;
 
     @include respond(phone) {
       margin-bottom: 0rem;
     }
 
     .row {
-      margin-bottom: 8rem;
+      margin-bottom: 5rem;
 
       @include respond(phone) {
         margin-bottom: 4rem;
       }
+    }
+    .row-blog{
+      margin-top: 5rem;
+      margin-bottom: 2rem;
     }
 
     &__text {
@@ -37,10 +41,10 @@
       &-title {
         font-weight: bold;
         margin-bottom: 1.8rem;
-        font-size: $mid-font-size;
+        font-size: $default-font-size;
 
         @include respond(phone) {
-          font-size: 2rem;
+          font-size: 1.4rem;
         }
       }
 

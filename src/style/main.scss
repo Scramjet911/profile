@@ -1,4 +1,5 @@
-@import './vendors/bootstrap.scss';
+@import '../vendor/bootstrap/bootstrap';
+
 
 @import './abstracts/mixins';
 @import './abstracts/variables';
@@ -16,3 +17,4 @@
 @import './sections/contact';
 @import './sections/hero';
 @import './sections/projects';
+@import './sections/skills';

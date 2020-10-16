@@ -7,7 +7,7 @@ h1 {
 p,
 a {
   font-family: 'Montserrat', sans-serif;
-  font-size: $default-font-size;
+  font-size: 1.15rem;
 }
 
 a,
@@ -24,8 +24,8 @@ a:hover {
 
 .section-title {
   margin: 0px;
-  margin-bottom: 4.5rem;
-  font-size: $big-font-size;
+  margin-bottom: 2.5rem;
+  font-size: $mid-font-size;
   font-weight: bold;
   text-transform: uppercase;
 

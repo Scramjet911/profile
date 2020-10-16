@@ -2,7 +2,8 @@ const Webpack = require("webpack");
 module.exports = {
   entry: {
     vendor: "./src/vendor.js",
-    main: "./src/index.js"
+    main: "./src/index.js",
+    // scroll: "./src/vendor/scrollreveal/scrollreveal.min.js"
   },
   module: {
     rules: [
@@ -11,7 +12,7 @@ module.exports = {
         use: ["html-loader"]
       },
       {
-        test: /\.(jpg|jpeg|png|gif|svg|pdf)$/,
+        test: /\.(jpg|jpeg|png|gif|svg|pdf|webp)$/,
         use: [
           {
             loader: "file-loader",
@@ -22,6 +23,18 @@ module.exports = {
             }
           }
         ]
+      },
+      {
+        test: /\.(ttf|eot|svg|woff(2)?)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+        use: [{
+          loader: "file-loader",
+          options: {
+            name: "[name].[ext]",
+            outputPath: "fonts/", 
+            publicPath: "../fonts/",
+            esModule: false
+            }
+        }]
       }
     ]
   },
