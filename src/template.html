@@ -354,23 +354,23 @@
         Contact Me
       </h2>
 
-      <form id="contact_form">
+      <form name="contact" method="POST" data-netifly="true" id="contact_form">
       <div class="row input-container">
         <div class="col-md-6 col-sm-12">
           <div class="styled-input d-flex flex-column-reverse input-field col-lg-12 col-md-12 col-sm-12">
-            <input id="name" type="text" class="form-control text-white" required/>
+            <input id="name" type="text" class="form-control text-white" name="Name" required/>
             <label for="name">Name</label>
           </div>
         </div>
         <div class="col-md-6 col-sm-12">
           <div class="styled-input d-flex flex-column-reverse input-field col-lg-12 col-md-12 col-sm-12">
-            <input id="email" type="text" class="form-control text-white" required/>
+            <input id="email" type="text" class="form-control text-white" name="Email" required/>
             <label for="email">Email</label>
           </div>
         </div>
         <div class="col-xs-12 col-md-12 col-sm-12 mx-auto">
           <div class="styled-input-wide d-flex flex-column-reverse input-field col-lg-12 col-md-12 col-sm-12">
-            <textarea id="message" type="text" class="form-control text-white" required></textarea>
+            <textarea id="message" type="text" class="form-control text-white" name="Message" required></textarea>
             <label for="message">Message</label>
           </div>
         </div>
