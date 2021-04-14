@@ -12,27 +12,22 @@ module.exports = merge(common, {
   plugins: [
     new HtmlWebpackPlugin({
       template: './src/template.html',
-      favicon: './src/assets/favicon.png'
     })
   ],
   
   module: {
     rules: [
       {
-        test: /\.scss$/,
-        use: [
-          'style-loader', //3. Inject styles into DOM
-          'css-loader', //2. Turns css into commonjs
-          'sass-loader'
-        ] //1. Turns sass into css
+        test: /\.(sa|sc|c)ss$/,
+        use: ["style-loader", "css-loader", "sass-loader"]
       },
-      {
-        test: /\.css$/,
-        use: [
-          "style-loader",
-          "css-loader",
-        ]
-      },
+      // {
+      //   test: /\.css$/,
+      //   use: [
+      //     "style-loader",
+      //     "css-loader",
+      //   ]
+      // },
       
     ]
   }

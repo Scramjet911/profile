@@ -3,7 +3,6 @@ module.exports = {
   entry: {
     vendor: "./src/vendor.js",
     main: "./src/index.js",
-    // scroll: "./src/vendor/scrollreveal/scrollreveal.min.js"
   },
   module: {
     rules: [
@@ -31,7 +30,6 @@ module.exports = {
           options: {
             name: "[name].[ext]",
             outputPath: "fonts/", 
-            publicPath: "../fonts/",
             esModule: false
             }
         }]
