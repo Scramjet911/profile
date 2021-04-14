@@ -20,10 +20,6 @@ $('a[href^="#"]').on('click', function(event) {
   }
 });
 
-$("#contact_form").on('submit', function(event){
-  event.preventDefault();
-  $('#contact_form').trigger('reset');
-});
 
 initSr();
 initTilt();
