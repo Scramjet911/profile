@@ -6,6 +6,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
+const webpack = require('webpack');
 
 module.exports = merge(common, {
   mode: 'production',
@@ -19,13 +20,12 @@ module.exports = merge(common, {
       new TerserPlugin(),
       new HtmlWebpackPlugin({
         template: './src/template.html',
-        favicon: './src/assets/favicon.png',
         minify: {
           removeAttributeQuotes: true,
           collapseWhitespace: true,
           removeComments: true
         }
-      })
+      }),
     ]
   },
   plugins: [
@@ -37,7 +37,7 @@ module.exports = merge(common, {
   module: {
     rules: [
       {
-        test: /\.scss$/,
+        test: /\.(sa|sc|c)ss$/,
         use: [
           MiniCssExtractPlugin.loader, //3. Extract css into files
           'css-loader', //2. Turns css into commonjs

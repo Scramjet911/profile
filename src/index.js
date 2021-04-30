@@ -3,7 +3,7 @@ import initSr from './js/sr';
 
 import './style/main.scss';
 // Icons (Git, Linkedin)
-import './vendor/fontello/css/fontello.css'
+import './vendor/fontello/css/fontello.css';
 
 $('a[href^="#"]').on('click', function(event) {
   var target = $(this.getAttribute('href'));
@@ -20,10 +20,6 @@ $('a[href^="#"]').on('click', function(event) {
   }
 });
 
-$("#contact_form").on('submit', function(event){
-  event.preventDefault();
-  $('#contact_form').trigger('reset');
-});
 
 initSr();
 initTilt();

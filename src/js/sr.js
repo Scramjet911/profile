@@ -1,4 +1,10 @@
-import assignProps from './assignProps';
+import ScrollReveal from 'scrollreveal';
+
+function assignProps(props, defaultProps) {
+	// Fix for SCRIPT1028 in Edge
+	return Object.assign({}, defaultProps, props);
+}
+
 export default function() {
   const defaultProps = {
     easing: 'cubic-bezier(0.5, 0, 0, 1)',
@@ -9,6 +15,7 @@ export default function() {
   };
   
   /* Section Title */
+    
   ScrollReveal().reveal('.section-title', 
     assignProps(
       {
