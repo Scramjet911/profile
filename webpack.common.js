@@ -33,6 +33,19 @@ module.exports = {
             esModule: false
             }
         }]
+      },
+      {
+        test: /sitemap.xml$/,
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              name: "[name].[ext]",
+              outputPath: "./",
+              esModule: false
+            }
+          }
+        ]
       }
     ]
   },
